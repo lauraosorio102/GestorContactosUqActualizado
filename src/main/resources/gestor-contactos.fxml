@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lauradev.gestorcontactosuq.controllers.GestorContactosController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #e8f8f5;" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="ButtonCrear" layoutX="50.0" layoutY="322.0" mnemonicParsing="false" onAction="#crearActionButton" prefHeight="26.0" prefWidth="131.0" style="-fx-background-color: #abebc6;" text="Crear" />
+            <Button fx:id="ButtonEditar" layoutX="181.0" layoutY="322.0" mnemonicParsing="false" onAction="#editarActionButton" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #fbfcfc;" text="Editar" />
+            <Button fx:id="ButtonEliminar" layoutX="300.0" layoutY="322.0" mnemonicParsing="false" onAction="#eliminarActionButton" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #f5b7b1;" text="Eliminar" />
+            <DatePicker fx:id="Datepuckerfecha" layoutX="137.0" layoutY="127.0" prefHeight="26.0" prefWidth="111.0" />
+            <Label layoutX="26.0" layoutY="29.0" text="Nombre" />
+            <Label layoutX="26.0" layoutY="60.0" text="Apellido" />
+            <Label layoutX="26.0" layoutY="131.0" text="fecha de nacimiento " />
+            <Label layoutX="26.0" layoutY="93.0" prefHeight="18.0" prefWidth="119.0" text="ID" />
+            <Label layoutX="34.0" layoutY="168.0" text="Email" />
+            <TableView fx:id="tablaUsuario" layoutX="257.0" layoutY="71.0" prefHeight="210.0" prefWidth="379.0">
+              <columns>
+                <TableColumn fx:id="cl_nombre" prefWidth="60.0" text="Nombre " />
+                <TableColumn fx:id="cl_apellido" prefWidth="60.0" text="Apellido" />
+                  <TableColumn fx:id="cl_id" prefWidth="60.0" text="ID" />
+                  <TableColumn fx:id="cl_fecha" prefWidth="60.0" text="Fecha " />
+                  <TableColumn fx:id="cl_email" prefWidth="60.0" text="Email" />
+                  <TableColumn fx:id="cl_telefono" prefWidth="60.0" text="Telefono" />
+              </columns>
+            </TableView>
+            <TextField fx:id="campoTxtNombre" layoutX="102.0" layoutY="25.0" />
+            <Button fx:id="Btn_imagen" layoutX="12.0" layoutY="281.0" mnemonicParsing="false" onAction="#seleccionarImagen" text="seleccione foto" />
+            <TextField fx:id="campoTxtApellido" layoutX="102.0" layoutY="56.0" />
+            <TextField fx:id="campoTxtID" layoutX="102.0" layoutY="89.0" />
+            <TextField fx:id="campoTxtEmail" layoutX="102.0" layoutY="164.0" />
+            <Label layoutX="36.0" layoutY="235.0" text="Foto" />
+            <ComboBox fx:id="cbOpciones" layoutX="352.0" layoutY="12.0" opacity="0.61" prefHeight="26.0" prefWidth="166.0" promptText="seleccione una opcion " />
+            <Label layoutX="26.0" layoutY="199.0" prefHeight="18.0" prefWidth="53.0" text="Telefono" />
+            <TextField fx:id="campoTxtTelefono" layoutX="102.0" layoutY="195.0" />
+            <Button fx:id="ButtonCrear1" layoutX="486.0" layoutY="44.0" mnemonicParsing="false" onAction="#filtrarTabla" prefHeight="26.0" prefWidth="65.0" text="Buscar" textFill="#020b90" />
+            <TextField fx:id="txtFiltro" layoutX="320.0" layoutY="44.0" promptText="seleccione una opcion" />
+            <ImageView fx:id="img_imagenPerfil" fitHeight="84.0" fitWidth="166.0" layoutX="102.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+            </ImageView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
